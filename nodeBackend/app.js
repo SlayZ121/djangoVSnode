@@ -7,7 +7,7 @@ const path = require("path");
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.port;
 const uri = process.env.mongo_uri;
 
 app.get("/api/products", async (req, res) => {
